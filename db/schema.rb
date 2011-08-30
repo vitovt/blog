@@ -10,6 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110830170553) do
+
+  create_table "posts", :force => true do |t|
+    t.date     "publishdate"
+    t.string   "name"
+    t.string   "title"
+    t.text     "content"
+    t.time     "wakeuptime"
+    t.time     "wentsleeptime"
+    t.integer  "negotiations"
+    t.integer  "efficiencies"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
