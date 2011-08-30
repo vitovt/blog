@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  publishdate: 2011-08-30
+  name: MyString
+  title: MyString
+  content: MyText
+  wakeuptime: 2011-08-30 20:05:54
+  wentsleeptime: 2011-08-30 20:05:54
+  negotiations: 1
+  efficiencies: 1
+
+two:
+  publishdate: 2011-08-30
+  name: MyString
+  title: MyString
+  content: MyText
+  wakeuptime: 2011-08-30 20:05:54
+  wentsleeptime: 2011-08-30 20:05:54
+  negotiations: 1
+  efficiencies: 1
