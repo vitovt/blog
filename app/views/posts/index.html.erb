@@ -24,8 +24,8 @@
 
 
 <tr>
-    <td><%= post.wakeuptime %></td>
-    <td><%= post.wentsleeptime %></td>
+    <td><%= "#{post.wakeuptime.hour}:#{post.wakeuptime.min}" %></td>
+    <td><%= "#{post.wentsleeptime.hour}:#{post.wentsleeptime.min}" %> </td>
     <td align="center"><%= post.negotiations %></td>
     <td align="center"><%= post.efficiencies %></td>
     <td><%= link_to 'Show', post %></td>
