@@ -1,0 +1,37 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Publishdate</th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Wakeuptime</th>
+    <th>Wentsleeptime</th>
+    <th>Negotiations</th>
+    <th>Efficiencies</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.publishdate %></td>
+    <td><%= post.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td><%= post.wakeuptime %></td>
+    <td><%= post.wentsleeptime %></td>
+    <td><%= post.negotiations %></td>
+    <td><%= post.efficiencies %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
