@@ -12,12 +12,12 @@
 
 <p>
   <b>Title:</b>
-  <%= @post.title %>
+ <%= @post.title %>
 </p>
 
 <p>
   <b>Content:</b>
-  <%= @post.content %>
+  <%= RedCloth.new(@post.content).to_html %>
 </p>
 
 <p>
