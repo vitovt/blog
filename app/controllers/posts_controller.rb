@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with :name => "Verboloz", :password => "verbolo", :except => :index
   # GET /posts
   # GET /posts.xml
   def index
