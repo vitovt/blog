@@ -20,26 +20,22 @@
   <%= raw RedCloth.new(@post.content).to_html %>
 </p>
 
-<p>
-  <b>Wakeuptime:</b>
-  <%= @post.wakeuptime %>
-</p>
-
-<p>
-  <b>Wentsleeptime:</b>
-  <%= @post.wentsleeptime %>
-</p>
-
-<p>
-  <b>Negotiations:</b>
-  <%= @post.negotiations %>
-</p>
-
-<p>
-  <b>Efficiencies:</b>
-  <%= @post.efficiencies %>
-</p>
-
+<table>
+  <tr>                                                                                                                          
+    <th>Wakeuptime</th>                                                                                                         
+    <th>Wentsleeptime</th>                                                                                                      
+    <th>Negotiations</th>                                                                                                       
+    <th>Efficiencies</th>                                                                                                       
+  </tr>                                                                                                                         
+                                                                                                                                
+                                                                                                                                
+  <tr>                                                                                                                            
+    <td><%= "#{@post.wakeuptime.hour}:#{@post.wakeuptime.min}" %></td>
+    <td><%= "#{@post.wentsleeptime.hour}:#{@post.wentsleeptime.min}" %></td>
+    <td align="center"><%= @post.negotiations %></td>
+    <td align="center"><%= @post.efficiencies %></td>                                                                         
+  </tr>   
+</table>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
