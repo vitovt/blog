@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+
+ USER_ID, PASSWORD = "admin", "cisco"
+ 
+   # Require authentication only for edit and delete and new operation
+   before_filter :authenticate, :only => [ :edit, :destroy, :new ]
+
   # GET /posts
   # GET /posts.xml
   def index
@@ -80,4 +86,11 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+private
+   def authenticate
+      authenticate_or_request_with_http_basic do |id, password| 
+          id == USER_ID && password == PASSWORD
+      end
+   end
 end
