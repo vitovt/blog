@@ -9,7 +9,7 @@
 
 <%= post.name %>:<%= post.publishdate %>
 <br>
-<%= post.content %>
+<%= raw textilize(post.content) %>
 <table border=1>
 
   <tr>
