@@ -4,7 +4,19 @@
   <title>Verbolozblog</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'jquery-1.2.6' %>
+    <%= javascript_include_tag 'jquery.truncator' %>
   <%= csrf_meta_tag %>
+  <script language="javascript" type="text/javascript">
+    $(function() {
+      $('.content').truncate({max_length: 124});
+    });
+  </script>
+  <style type="text/css">
+    table { border-collapse: collapse; }
+    td, th { border: 1px solid #000; }
+  </style>
+
 </head>
 <body>
 
