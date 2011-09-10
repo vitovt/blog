@@ -54,3 +54,14 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+th, td {
+  /*  color:green;*/
+    font-size:xx-small;
+    text-align:center;
+}
+
+
+th {
+    color:gray;
+}
