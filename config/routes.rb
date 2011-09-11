@@ -60,4 +60,7 @@ Verbolozblog::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 root :to => "home#index"
+
+match "/stories" => redirect("/posts")
+match "/go/ium" => redirect("http://shsd.znanium.ru/register.php?link=21288")
 end
