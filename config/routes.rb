@@ -1,4 +1,5 @@
 Verbolozblog::Application.routes.draw do
+  match 'posts/table' => 'posts#table'
   resources :posts
 
   get "home/index"
