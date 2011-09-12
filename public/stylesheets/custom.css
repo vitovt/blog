@@ -1,0 +1,49 @@
+  <style type="text/css">
+    hr {
+      border: 0;
+      width: 80%;
+    }
+    hr.hr1 {
+      color: #009;
+      background-color: #009;
+      height: 3px;
+    }
+    hr.hr2 {
+      color: #003;
+      background-color: #003;
+      height: 1px;
+    }
+    hr.hr3 {
+      border: 1px solid #f00;
+      color: #fff;
+      background-color: #fff;
+      height: 10px;
+    }
+    hr.hr4 {
+      border-bottom: 1px dashed #00a;
+      border-top: 1px solid #00a;
+      color: #fff;
+      background-color: #fff;
+      height: 4px;
+    }
+    hr.hr5 {
+      border-top: 2px solid #900;
+      border-left: 20px solid #900;
+      border-right: 20px solid #900;
+      color: #f00;
+      background-color: #f00;
+      height: 4px;
+    }
+    hr.hr6 {
+      height: 15px;
+      color: transparent;
+      background: #fff url(hr1.gif) no-repeat scroll center;
+    }
+    div.hr6 {
+      height: 15px;
+      background: #fff url(hr1.gif) no-repeat scroll center;
+    }
+    div.hr6 hr {
+      display: none;
+    }
+  </style>
