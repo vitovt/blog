@@ -1,0 +1,28 @@
+<h2>Benjamin table</h1>
+
+
+<div class="resulttable">
+  <table border=1>
+  <tr>
+    <th>Date</th>
+    <th>Wakeuptime</th>
+    <th>Wentsleeptime</th>
+    <th>Negotiations</th>
+    <th>Efficiencies</th>
+  </tr>
+ 
+
+  <% @posts.each do |post| %>
+   <tr>
+     <td><%= post.publishdate %></td>
+     <td><%= "#{post.wakeuptime.hour}:#{post.wakeuptime.min}" %></td>
+     <td><%= "#{post.wentsleeptime.hour}:#{post.wentsleeptime.min}" %> </td>
+     <td align="center"><%= post.negotiations %></td>
+     <td align="center"><%= post.efficiencies %></td>
+   </tr>
+  <% end %>
+
+  </table>
+</div> <!--resulttable-->
+<br>
+

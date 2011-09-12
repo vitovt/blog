@@ -5,6 +5,17 @@ class PostsController < ApplicationController
    # Require authentication only for edit and delete and new operation
    before_filter :authenticate, :only => [ :edit, :destroy, :new ]
 
+  # GET /posts/table
+  # GET /posts/table.xml
+  def table
+    @posts = Post.all
+
+    respond_to do |format|
+      format.html # table.html.erb
+      format.xml  { render :xml => @posts }
+    end
+  end
+
   # GET /posts
   # GET /posts.xml
   def index
