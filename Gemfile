@@ -8,6 +8,8 @@ gem 'rails', '3.0.10'
 gem 'sqlite3'
 gem 'thin'
 gem 'RedCloth'
+gem 'formtastic'
+gem 'contact_us', '~> 0.1.3'
 # Use unicorn as the web server
 # gem 'unicorn'
 
