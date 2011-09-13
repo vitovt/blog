@@ -11,6 +11,8 @@
     <th>Eff.</th>
     <th>Pull</th>
     <th>Squat</th>
+    <th><strong>Show</strong></th>
+    <th><strong>Edit</strong></th>
   </tr>
  
 
@@ -23,6 +25,8 @@
      <td align="center"><%= post.efficiencies %></td>
      <td align="center"><%= post.pullups %></td>
      <td align="center"><%= post.squatting %></td>
+     <td><%= link_to 'Show', post %></td>
+     <td><%= link_to 'Edit', edit_post_path(post) %></td>
    </tr>
   <% end %>
 
