@@ -19,12 +19,16 @@ Author:<%= post.name %>, <%= post.publishdate %>
     <th>Wentsleeptime</th>
     <th>Negotiations</th>
     <th>Efficiencies</th>
+    <th>Pull-ups</th>
+    <th>Squatting</th>
   </tr>
   <tr>
     <td><%= "#{post.wakeuptime.hour}:#{post.wakeuptime.min}" %></td>
     <td><%= "#{post.wentsleeptime.hour}:#{post.wentsleeptime.min}" %> </td>
     <td align="center"><%= post.negotiations %></td>
     <td align="center"><%= post.efficiencies %></td>
+    <td align="center"><%= post.pullups %></td>
+    <td align="center"><%= post.squatting %></td>
   </tr>
   </table>
 </div> <!--resulttable-->
