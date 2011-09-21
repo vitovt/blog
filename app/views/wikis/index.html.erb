@@ -1,10 +1,9 @@
-<h1>Listing wikis</h1>
+<h1>Listing wiki records</h1>
 
-<table>
+<table width="100%">
   <tr>
     <th>Publishdate</th>
     <th>Title</th>
-    <th>Content</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +12,7 @@
 <% @wikis.each do |wiki| %>
   <tr>
     <td><%= wiki.publishdate %></td>
-    <td><%= wiki.title %></td>
-    <td><%= wiki.content %></td>
+    <td><%=  link_to wiki.title, wiki %></td>
     <td><%= link_to 'Show', wiki %></td>
     <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
     <td><%= link_to 'Destroy', wiki, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -24,4 +22,4 @@
 
 <br />
 
-<%= link_to 'New Wiki', new_wiki_path %>
+<%= link_to 'New Wiki Record', new_wiki_path %>
