@@ -2,6 +2,7 @@ Verbolozblog::Application.routes.draw do
   resources :wikis
 
   match 'table' => 'posts#table'
+  match 'rss' => 'posts#rss'
   resources :posts
 
   get "home/index"

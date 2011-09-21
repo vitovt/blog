@@ -98,6 +98,12 @@ class PostsController < ApplicationController
     end
   end
 
+def rss
+  @posts = Post.all
+  render :layout => false
+  response.headers["Content-Type"] = "application/xml; charset=utf-8"
+end
+
 private
    def authenticate
       authenticate_or_request_with_http_basic do |id, password| 
