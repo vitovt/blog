@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Publishdate:</b>
+  <%= @wiki.publishdate %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @wiki.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= raw RedCloth.new(@wiki.content).to_html %>
+</p>
+
+
+<%= link_to 'Edit', edit_wiki_path(@wiki) %> |
+<%= link_to 'Back', wikis_path %>
