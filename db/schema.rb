@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110921131411) do
+ActiveRecord::Schema.define(:version => 20110924084048) do
 
   create_table "posts", :force => true do |t|
     t.date     "publishdate"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110921131411) do
     t.datetime "updated_at"
     t.integer  "pullups"
     t.integer  "squatting"
+    t.boolean  "gymvisit"
   end
 
   create_table "wikis", :force => true do |t|

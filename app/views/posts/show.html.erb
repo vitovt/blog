@@ -28,6 +28,7 @@
     <th>Efficiencies</th>
     <th>Pullups</th>
     <th>Squatting</th>
+    <th>GymVisit</th>
   </tr>                                                                                                                         
                                                                                                                                 
                                                                                                                                 
@@ -35,9 +36,10 @@
     <td><%= "#{@post.wakeuptime.hour}:#{@post.wakeuptime.min}" %></td>
     <td><%= "#{@post.wentsleeptime.hour}:#{@post.wentsleeptime.min}" %></td>
     <td align="center"><%= @post.negotiations %></td>
-    <td align="center"><%= @post.efficiencies %></td>                                                                         
-    <td align="center"><%= @post.pullups %></td>                                                                         
-    <td align="center"><%= @post.squatting %></td>                                                                         
+    <td align="center"><%= @post.efficiencies %></td>
+    <td align="center"><%= @post.pullups %></td>
+    <td align="center"><%= @post.squatting %></td>
+    <td align="center"><%= @post.gymvisit %></td>
 
   </tr>   
 </table>
