@@ -18,15 +18,57 @@
  
 
   <% @posts.each do |post| %>
-   <tr>
+   <tr class="<%= cycle("odd", "even") =%>">
      <td><%= post.publishdate %></td>
      <td><%= "#{post.wakeuptime.hour}:#{post.wakeuptime.min}" %></td>
      <td><%= "#{post.wentsleeptime.hour}:#{post.wentsleeptime.min}" %> </td>
-     <td align="center"><%= post.negotiations %></td>
-     <td align="center"><%= post.efficiencies %></td>
-     <td align="center"><%= post.pullups %></td>
-     <td align="center"><%= post.squatting %></td>
-     <td align="center"><%= post.gymvisit %></td>
+
+
+     <td align="center" class="<%=
+	if post.negotiations == 0
+        "red"
+	end
+      =%>">
+	<%= post.negotiations %>
+     </td>
+     
+      <td align="center" class="<%=
+	if post.efficiencies == 0
+        "red"
+	end
+      =%>">
+        <%= post.efficiencies %>
+     </td>
+
+     <td align="center" class="<%=
+      case post.pullups
+        when 0..9: "red"
+        when 9..19: "yellow"
+        when 20..1999: "green"
+      end
+      =%> ">
+     	<%= post.pullups %>
+     </td>
+
+     <td align="center" class="<%=
+      case post.squatting
+        when 0..49: "red"
+        when 50..99: "yellow"
+        when 100..1999: "green"
+      end
+   =%>" ><%= post.squatting %></td>
+
+     <td align="center" class="<%=
+	if post.gymvisit == true  
+        "green"
+	end
+      =%>"><%= 
+     if post.gymvisit == true
+     	"+"
+     else
+     	"-"
+     end
+     %></td>
      <td><%= link_to 'Show', post %></td>
      <td><%= link_to 'Edit', edit_post_path(post) %></td>
    </tr>
