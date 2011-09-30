@@ -25,13 +25,7 @@
      <td><%= "#{post.wentsleeptime.hour}:#{post.wentsleeptime.min}" %> </td>
 
 
-     <td align="center" class="<%=
-	if post.negotiations == 0
-        "red"
-	end
-      %>">
-	<%= post.negotiations %>
-     </td>
+     <td align="center" class="<% if post.negotiations == 0 %>red<% end %>"><%= post.negotiations %></td>
      
       <td align="center" class="<%=
 	if post.efficiencies == 0
