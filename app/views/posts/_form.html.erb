@@ -28,6 +28,10 @@
     <%= f.text_area :content %>
   </div>
   <div class="field">
+    <%= f.label :privatecontent %><br />
+    <%= f.text_area :privatecontent %>
+  </div>
+  <div class="field">
     <%= f.label :wakeuptime %><br />
     <%= f.time_select :wakeuptime %>
   </div>
@@ -54,6 +58,10 @@
   <div class="field">
     <%= f.label :gymvisit %><br />
     <%= f.check_box :gymvisit %>
+  </div>
+  <div class="field">
+    <%= f.label :planfulfilled %><br />
+    <%= f.text_field :planfulfilled %>
   </div>
   <div class="actions">
     <%= f.submit %>
