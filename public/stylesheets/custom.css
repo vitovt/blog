@@ -63,3 +63,9 @@
     td.transparent  {
     }
 
+hr.list {
+color: #00f;
+background-color: #88f;
+height: 1px;
+width: 100%;
+}  

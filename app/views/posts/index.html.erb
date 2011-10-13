@@ -6,7 +6,7 @@
 <%= link_to post.title, post %>
 </h2>
 
-Author:<%= post.name %>, <%= post.publishdate %>
+Author:<%= post.name %>, <strong><%= post.publishdate %></strong>
 <br>
 <div class="content">
 <%= raw textilize(post.content) %>
@@ -44,7 +44,7 @@ Author:<%= post.name %>, <%= post.publishdate %>
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 </div>
-<hr>
+<hr class="list">
 <% end %>
 
 <a href="/rss"><img src="/banners/rss-reader.png" alt="RSS for my Blog" title="RSS for my Blog" ></a>
