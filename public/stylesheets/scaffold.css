@@ -4,6 +4,7 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  margin: 0 auto 5px; /* Отступы сверху, по горизонтали и снизу */
 }
 
 pre {
@@ -65,3 +66,7 @@ th, td {
 th {
     color:gray;
 }
+h2, h3, h4, h5, h6 {
+    margin: 5px auto 3px; /* Отступы сверху, по горизонтали и снизу */
+}
+
