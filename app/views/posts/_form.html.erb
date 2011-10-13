@@ -33,11 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :wakeuptime %><br />
-    <%= f.time_select :wakeuptime %>
+    <%= f.time_select :wakeuptime, :minute_step => 5 %>
   </div>
   <div class="field">
     <%= f.label :wentsleeptime %><br />
-    <%= f.time_select :wentsleeptime %>
+    <%= f.time_select :wentsleeptime, :minute_step => 5 %>
   </div>
   <div class="field">
     <%= f.label :negotiations %><br />
