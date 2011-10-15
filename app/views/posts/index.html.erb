@@ -1,7 +1,7 @@
  <h1> Listing posts</h1>
 <hr>
 
-<% @posts.each do |post| %>
+<% @posts.reverse.each do |post| %>
 <div id="<%= cycle("odd", "even") %>">
 <h2>
 <%= link_to post.title, post %>
