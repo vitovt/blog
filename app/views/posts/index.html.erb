@@ -2,6 +2,7 @@
 <hr>
 
 <% @posts.each do |post| %>
+<div id="<%= cycle("odd", "even") %>">
 <h2>
 <%= link_to post.title, post %>
 </h2>
@@ -43,6 +44,7 @@ Author:<%= post.name %>, <strong><%= post.publishdate %></strong>
     <%= link_to 'Show', post %>
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+</div>
 </div>
 <hr class="list">
 <% end %>

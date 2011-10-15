@@ -69,3 +69,7 @@ background-color: #88f;
 height: 1px;
 width: 100%;
 }  
+#odd
+{ background-color:#ffc;}
+#even
+{ background-color:#efe;}
