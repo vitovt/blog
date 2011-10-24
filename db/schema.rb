@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111010131209) do
+ActiveRecord::Schema.define(:version => 20111024104043) do
 
   create_table "posts", :force => true do |t|
     t.date     "publishdate"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20111010131209) do
     t.text     "privatecontent"
     t.integer  "planfulfilled"
     t.string   "goltisimpuls"
+    t.boolean  "hardening"
   end
 
   create_table "wikis", :force => true do |t|
